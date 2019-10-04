@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LittleGoal</string>
+    <string name="navigation_drawer_header_content_description">Navigation drawer header logo</string>
+    <string name="navigation_drawer_header_title">Little Goal</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="goals_empty">一片空白</string>
+
+    <!-- New Goal -->
+    <string name="goal_hint">你的目标(比如：先挣一个亿..)</string>
+    <string name="start_date_text">开始日期</string>
+    <string name="end_date_text">结束日期</string>
+    <string name="default_date">1970/01/01</string>
+    <string name="action_frequency">行动频率</string>
+    <string-array name="frequency_values">
+        <item>每天</item>
+        <item>每三天</item>
+        <item>每周</item>
+        <item>每月</item>
+    </string-array>
+    <string name="goal_description_text">鼓励语句</string>
+    <string name="description_hint">这里可以把自己喜欢的鼓励语句写下来!</string>
+    <string name="menu_save_text">保存</string>
+    <string name="item_frequency_text_format">周期为 %s 天</string>
+    <string name="delete_goal_text">删除目标</string>
+</resources>

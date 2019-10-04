@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@+id/goal_list_fragment">
+    <fragment
+            android:id="@+id/goal_list_fragment"
+            android:name="com.application.littlegoal.GoalListFragment"
+            android:label="My Goals"
+            tools:layout="@layout/fragment_goal_list">
+        <action
+                android:id="@+id/action_goal_list_fragment_to_goal_details_fragment"
+                app:destination="@id/goal_details_fragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+        <action
+                android:id="@+id/action_goal_list_fragment_to_addGoalFragment"
+                app:destination="@id/addGoalFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/goal_details_fragment"
+            android:name="com.application.littlegoal.GoalDetailsFragment"
+            android:label="Goal details"
+            tools:layout="@layout/fragment_goal_details">
+        <argument
+                android:name="goalId"
+                app:argType="integer" />
+        <action
+                android:id="@+id/action_goal_details_fragment_to_goal_list_fragment"
+                app:destination="@id/goal_list_fragment"
+                app:popUpTo="@+id/goal_list_fragment"
+                app:popUpToInclusive="true"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/addGoalFragment"
+            android:name="com.application.littlegoal.AddGoalFragment"
+            android:label="Add Goal"
+            tools:layout="@layout/add_goal_fragment">
+        <action
+                android:id="@+id/action_addGoalFragment_to_goal_list_fragment"
+                app:destination="@id/goal_list_fragment"
+                app:popUpTo="@+id/goal_list_fragment"
+                app:popUpToInclusive="true"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+</navigation>
